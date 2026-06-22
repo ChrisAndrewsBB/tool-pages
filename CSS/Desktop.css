@@ -1,0 +1,43 @@
+:root {
+  --Vivid_Malachite_Green: #04e62a; /* Safe band main */
+  --Simple_Pastel_Green: #DEF5DE; /* Safe band background */
+  --Dark_Yellow:#ffcc00; /* Warning band main */
+  --Early_Dawn:#fff9e6; /* Warning band background */
+  --Vivid_Gamboge:rgb(255, 152, 0); /* Alert band main */
+  --Sazerac:#fff3e0; /* Alert band background */
+  --Digital_Red:#ff0000; /* Danger band main */ 
+  --Pink_Affair:#ffecec; /* Danger band background */
+  --Milani: #e84a43;
+  --Luxury_Red: #ad3631;
+  --Black:#000000;
+  --Eerie_Black: #1a1a1a;
+  --White:#ffffff;
+  --Smooth_Grey:#cccccc;
+  --Off_White_Grey:#f0f0f0;
+  --Super_Grey:#999999;
+  --Bold_Grey:#666666;
+  --Matt_Graphite:#424242;
+  --Manhattan_Grey:#525252;
+  --Vivid_Cerulean:#00b0f0; /* BB blue line */
+  --River_Blue:#3b668e;
+  --Blue_Dianne:#224659; /* BB primary blue */
+  --Alice_Blue:#eef8ff;
+  --Arctic_Ice:#f4faff;
+  --Dark_River_Blue: #39668f; /* BB logo secondary blue */
+  --Vintage_Dark_Blue: #29363e; /*BB footer blue */
+  --Arabic_Grey: #888888;
+  --Calming_Blue_Grey: #ccd3da;
+  --Wolf_Gray: #929393; /* BB socials gray */
+  --Misty_Blue_Grey: #dde2e7;
+  --Dark_Charcoal: #333333;
+  --Space_Blue: #1e1b4b;
+  --Subtle_White: #eeeeee;
+  --Blue_Chalk: #ede9fe;
+  --Lavender_Blue: #c7d2fe;
+  --Traffic_Red: #ab1519; /* Hilti */
+  --Water_Blue: #216d76; /* Makita */
+  --Carrot_Orange: #e67045; /* Golz */
+  --Digital_Green: #008000;
+  --Orange: #ffa500;
+  --Gray_Hint: #e6e6e6;
+}
