@@ -599,7 +599,7 @@ const queryRows = Array.from(
   const exposure = document.getElementById("result-exposure");
   const detail = document.getElementById("result-detail");
   const action = document.getElementById("result-action");
-  const debug = document.getElementById("debug-band");
+  //const debug = document.getElementById("debug-band");
 
   if (
     !icon ||
@@ -623,7 +623,7 @@ const queryRows = Array.from(
     detail.textContent = "";
     action.textContent = "";
     icon.innerHTML = "";
-    if (debug) debug.textContent = "";
+    //if (debug) debug.textContent = "";
     return;
   }
 
