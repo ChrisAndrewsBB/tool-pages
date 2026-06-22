@@ -691,9 +691,9 @@ const queryRows = Array.from(
   detail.textContent = hseText[exposureLevel].detail;
   action.textContent = hseText[exposureLevel].action;
 
-  if (debug) {
-    debug.textContent = `DEBUG: points = ${Math.round(totalPoints)} | a8 = ${a8.toFixed(2)} | level = ${exposureLevel}`;
-  }
+  //if (debug) {
+ //   debug.textContent = `DEBUG: points = ${Math.round(totalPoints)} | a8 = ${a8.toFixed(2)} | level = ${exposureLevel}`;
+ // }
 
   output.classList.remove("pulse");
   if (exposureLevel !== "safe" && exposureLevel !== "caution") {
