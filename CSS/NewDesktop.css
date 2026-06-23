@@ -2,9 +2,6 @@
 :root { 
   /* #region Logos */
   --bblogo: url('https://static.wixstatic.com/media/3b0a9f_5a9deae6ef434173a033497fbeba288a~mv2.png');
-  --bbicon: url('https://static.wixstatic.com/media/3b0a9f_14c21209a7a04c4f8a332a8368bb19aa~mv2.png');
-  --bbshortcuticon: url('https://static.wixstatic.com/media/3b0a9f_14c21209a7a04c4f8a332a8368bb19aa~mv2.png');
-  --bbappleicon: url('https://static.wixstatic.com/media/3b0a9f_14c21209a7a04c4f8a332a8368bb19aa~mv2.png');
   /*#endregion*/
   /* #region Colours */
   --Vivid_Malachite_Green: #04e62a;
@@ -362,6 +359,22 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
 .btn-clearrow::before {
   content: "↺ ";
 }
+.btn-reset {
+  --bs-btn-color: var(--White);;
+  --bs-btn-bg: var(--Super_Grey);
+  --bs-btn-border-color: var(--Calming_Blue_Grey);
+  --bs-btn-hover-color: var(--White);
+  --bs-btn-hover-bg: var(--Bold_Grey);
+  --bs-btn-hover-border-color: var(--Dark_River_Blue);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--White);
+  --bs-btn-active-bg: var(--Misty_Blue_Grey);
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--White);
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
 .btn-remove {
   --bs-btn-color: var(--White);
   --bs-btn-bg: var(--Milani);
@@ -463,9 +476,6 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
   --bs-btn-disabled-color: var(--White);
   --bs-btn-disabled-bg: #0d6efd;
   --bs-btn-disabled-border-color: #0d6efd;
-}
-.btn-addtool::before {
-  content: "+ ";
 }
 /* #endregion */
 

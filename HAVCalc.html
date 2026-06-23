@@ -7,12 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HAVS | Beton Bauen Ltd</title>
   <!-- Stylesheets -->
-  <link href="CSS/bootstrap-5.3.8.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-<link href="CSS/NewDesktop.css" rel="stylesheet" type="text/css" media="screen">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/bootstrap-5.3.8.css" > <!-- Import bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> <!-- Import bootstrap icons -->
+  <link rel="stylesheet" href="CSS/NewDesktop.css" type="text/css" media="screen"> <!-- Import base stylesheet -->
+  <!-- Icons -->
+  <link rel="icon" sizes="192x192" href="Assets/Logos/BetonBauenLogo.svg">
+  <link rel="shortcut icon" href="Assets/Logos/BetonBauenLogo.svg">
+  <link rel="apple-touch-icon" href="Assets/Logos/BetonBauenLogo.svg">
+  <link rel="mask-icon" href="Assets/Logos/BetonBauenLogo.svg">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Import Roboto font family -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Import Roboto font family -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" ><!-- Import Roboto font family -->
 </head>
 <!-- Page body -->
 <body class="d-flex flex-column min-vh-100">
@@ -20,35 +26,19 @@
   <section id="Navigation">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark bb-nav px-3">
     <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link active" aria-current="page" href="#">HAVS CALCULATOR<span class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Noise.html">TOOL NOISE LEVELS</a>
-        </li>
-        <!--<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">Dropdown</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>-->
-      </ul>
-    </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link active" aria-current="page" href="#">HAVS CALCULATOR<span class="visually-hidden">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Noise.html">TOOL NOISE LEVELS</a>
+          </li>
+        </ul>
+      </div>
   </nav>
   </section>
   <!-- Header -->
@@ -76,7 +66,7 @@
   <section id="Popup buttons">
     <div class="container-fluid bbmodal-buttonrow pb-0 mb-4">
       <div class="row">
-        <div class="col-auto" id="Popup1">
+        <div id="Popup1" class="col-auto">
           <!-- Modal Trigger -->
           <button type="button" class="btn btn-popup" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"> WHAT IS HAND-ARM VIBRATION SYNDROME ? </button>
           <!-- Modal -->
@@ -167,7 +157,7 @@
             </div>
           </div>
         </div>
-        <div class="col-auto" id="Popup4">
+        <div id="Popup4" class="col-auto" >
           <!-- Modal Trigger -->
           <button type="button" class="btn btn-popup" data-bs-toggle="modal" data-bs-target="#staticBackdrop4"> HAND-ARM VIBRATION EXPOSURE REFERENCE </button>
           <!-- Modal -->
@@ -205,155 +195,151 @@
   </section>
   <!-- Data entry -->
   <section id="Data Entry">
-	<div></div>
-	  <div></div>
+    <div></div>
+    <div></div>
     <div class="container-fluid bb-table mt-4 mb-4">
-      <!-- Employee name -->
-		<span class="input-group-text text-bold section-header mb-3">WORK DETAILS</span>
+      <span class="input-group-text text-bold section-header mb-3">WORK DETAILS</span>
+      <!-- Employee name -->	  
       <div id="Employee Name" class="row">
-        <div class="col-auto">		
-            <div class="input-group input-group-sm mb-2">
-              <span class="input-group-text bb-input-group-text" id="nameInput">EMPLOYEE NAME:</span>
-                <input type="text" class="form-control text-lg-start" id="employeeName" placeholder="Name" aria-describedby="nameInput">
-            </div>      
+        <div class="col-auto">	
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bb-input-group-text" id="nameInput">EMPLOYEE NAME:</span>
+              <input type="text" class="form-control text-lg-start" id="employeeName" placeholder="Name" aria-describedby="nameInput">
+          </div>
         </div>
       </div>
       <!-- Site name -->
       <div id="Site Name" class="row">
         <div class="col-auto">
-            <div class="input-group input-group-sm mb-2">
-              <span class="input-group-text bb-input-group-text" id="locationInput">SITE / LOCATION:</span>
-                <input type="text" class="form-control text-lg-start" id="siteName" placeholder="Site / location" aria-describedby="locationInput">
-            </div>      
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bb-input-group-text" id="locationInput">SITE / LOCATION:</span>
+            <input type="text" class="form-control text-lg-start" id="siteName" placeholder="Site / location" aria-describedby="locationInput">
+          </div>      
         </div>
       </div>
       <!-- Week -->
       <div id="Week" class="row">
         <div class="col-auto">
-            <div class="input-group input-group-sm mb-2">
-              <span class="input-group-text bb-input-group-text" id="dateInput">WEEK COMMENCING:</span>
-                <input type="date" class="form-control text-lg-start" id="startDate" placeholder="dd/mm/yyyy" aria-describedby="dateInput">
-            </div>      
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bb-input-group-text" id="dateInput">WEEK COMMENCING:</span>
+            <input type="date" class="form-control text-lg-start" id="startDate" placeholder="dd/mm/yyyy" aria-describedby="dateInput">
+          </div>      
         </div>
       </div>
     </div>
   </section>
-  <section id="test1">
-	<div class="container-fluid bb-table mt-4 mb-4">
-		<span class="input-group-text text-bold section-header mb-3">TOOL DATA</span>
-		<template id="standaloneToolTemplateFull">
-			<div class="standalone-calculator-row" data-tool-name="" data-magnitude="0">
-				<div class="row align-items-end g-2 gy-0">
-					<div class="col-md-5 position-relative pt-0 mt-0">
-						<div class="tool-status-indicator"></div>
-						<div class="tool-dropdown">
-							<!--<label class="text-muted compact-label">Tool selection</label>-->
-							<div class="standalone-tool-select tool-selected form-select text-start py-2" style="cursor: pointer; min-height: 38px;">Select tool</div>
-							<div class="standalone-tool-panel tool-panel border rounded shadow-lg mt-1 bg-white" style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;"></div>
-						</div>
-					</div>
-					<div class="col-6 col-md-2 pt-0 mt-0">
-						<!--<label class="text-muted compact-label">Vibration Magnitude</label>-->
-						<input class="standalone-vibration vibration form-control text-center" type="number" min="0" max="12">
-					</div>
-					<div class="col-6 col-md-2 pt-0 mt-0">
-						<!--<label class="text-muted compact-label">Hours used</label>-->
-						<input class="standalone-hours hours form-control text-center" type="number" min="0" max="12">
-					</div>
-					<div class="col-6 col-md-2 pt-0 mt-0">
-					 <!-- <label class="text-muted compact-label">Minutes used</label>-->
-					  <input class="standalone-minutes minutes form-control text-center" type="number" min="0" max="59">
-					</div>
-					<div class="remove-wrap col-1">
-					  <button type="button" class="btn px-0" data-role="remove-row">
-						<i class="bi bi-trash-fill fs-2" style="color:#999"></i>
-					  </button>
-					</div>
-
-				</div>
-			</div>
+  <section id="StandaloneTable">
+    <div class="container-fluid bb-table mt-4 mb-4">
+      <span class="input-group-text text-bold section-header mb-3">TOOL DATA</span>
+        <template id="standaloneToolTemplateFull">
+          <div class="standalone-calculator-row" data-tool-name="" data-magnitude="0">
+            <div class="row align-items-end g-2 gy-0">
+              <div class="col-md-5 position-relative pt-0 mt-0">
+                <div class="tool-status-indicator"></div>
+                <div class="tool-dropdown">
+                  <!--<label class="text-muted compact-label">Tool selection</label>-->
+                  <div class="standalone-tool-select tool-selected form-select text-start py-2" style="cursor: pointer; min-height: 38px;">Select tool</div>
+                  <div class="standalone-tool-panel tool-panel border rounded shadow-lg mt-1 bg-white" style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;"></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-2 pt-0 mt-0">
+                <!--<label class="text-muted compact-label">Vibration Magnitude</label>-->
+                <input class="standalone-vibration vibration form-control text-center" type="number" min="0" max="12">
+              </div>
+              <div class="col-6 col-md-2 pt-0 mt-0">
+                <!--<label class="text-muted compact-label">Hours used</label>-->
+                  <input class="standalone-hours hours form-control text-center" type="number" min="0" max="12">
+              </div>
+              <div class="col-6 col-md-2 pt-0 mt-0">
+                <!-- <label class="text-muted compact-label">Minutes used</label>-->
+                <input class="standalone-minutes minutes form-control text-center" type="number" min="0" max="59">
+              </div>
+              <div class="remove-wrap col-1">
+                <button type="button" class="btn px-0" data-role="remove-row">
+                  <i class="bi bi-trash-fill fs-2" style="color:#999"></i>
+                </button>
+              </div>
+            </div>
+          </div>
 		</template>
-		<template id="standaloneToolTemplateCompact">
-			<div class="standalone-calculator-row compact" data-tool-name="" data-magnitude="0">
-				<div class="row align-items-end g-2 gy-0">
-					<div class="col-md-5 position-relative pt-0 mt-0">
-						<div class="tool-status-indicator"></div>
-						<div class="tool-dropdown">
-							<div class="standalone-tool-select tool-selected form-select text-start py-2"
-								 style="cursor: pointer; min-height: 38px;">
-							  Select tool
-							</div>
-							<div class="standalone-tool-panel tool-panel border rounded shadow-lg mt-1 bg-white"
-								 style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;">
-							</div>
-						</div>
-					</div>
-					<div class="col-6 col-md-2 pt-0 mt-0">
-						<input class="standalone-vibration vibration form-control text-center" type="number" min="0" max="12">
-					</div>
-					<div class="col-6 col-md-2 pt-0 mt-0">
-					  <input class="standalone-hours hours form-control text-center" type="number" min="0" max="12">
-					</div>
-					<div class="col-6 col-md-2 pt-0 mt-0">
-					  <input class="standalone-minutes minutes form-control text-center" type="number" min="0" max="59">
-					</div>
-					<div class="remove-wrap col-md-1 pt-0 mt-0">
-					  <button type="button" class="btn px-0" data-role="remove-row">
-						<i class="bi bi-trash-fill fs-2" style="color:#999"></i>
-					  </button>
-					</div>
+        <template id="standaloneToolTemplateCompact">
+          <div class="standalone-calculator-row compact" data-tool-name="" data-magnitude="0">
+            <div class="row align-items-end g-2 gy-0">
+              <div class="col-md-5 position-relative pt-0 mt-0">
+                <div class="tool-status-indicator"></div>
+                  <div class="tool-dropdown">
+                    <div class="standalone-tool-select tool-selected form-select text-start py-2" style="cursor: pointer; min-height: 38px;">Select tool</div>
+                    <div class="standalone-tool-panel tool-panel border rounded shadow-lg mt-1 bg-white" style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;"></div>
+                  </div>
+              </div>
+              <div class="col-6 col-md-2 pt-0 mt-0">
+                <input class="standalone-vibration vibration form-control text-center" type="number" min="0" max="12">
+              </div>
+              <div class="col-6 col-md-2 pt-0 mt-0">
+                <input class="standalone-hours hours form-control text-center" type="number" min="0" max="12">
+              </div>
+              <div class="col-6 col-md-2 pt-0 mt-0">
+                <input class="standalone-minutes minutes form-control text-center" type="number" min="0" max="59">
+              </div>
+              <div class="remove-wrap col-md-1 pt-0 mt-0">
+                <button type="button" class="btn px-0" data-role="remove-row">
+                  <i class="bi bi-trash-fill fs-2" style="color:#999"></i>
+                </button>
+              </div>
 
-				</div>
-			</div>
-		</template>	
-		<div class="row g-2 pb-2 tool-header-row">
-			<div class="col-md-5">Tool</div>
-			<div class="col-6 col-md-2">Vibration magnitude (m/s²)</div>
-			<div class="col-6 col-md-2">Hours used</div>
-			<div class="col-6 col-md-2">Minutes used</div>
-			<div class="remove-wrap col-md-1 pt-0 mt-0"></div>
+            </div>
+          </div>
+        </template>	
+        <div class="row g-2 pb-2 tool-header-row">
+          <div class="col-md-5">Tool</div>
+          <div class="col-6 col-md-2">Vibration magnitude (m/s²)</div>
+          <div class="col-6 col-md-2">Hours used</div>
+          <div class="col-6 col-md-2">Minutes used</div>
+          <div class="remove-wrap col-md-1 pt-0 mt-0"></div>
 		</div>
 		<div id="standaloneContainer"></div>
 	</div>
-   </section>
-
+  </section>
   <section id="Table-Buttons">
-	<div class="container-fluid bb-table mt-4 mb-4">
-		<!--<button type="button" class="btn btn-addtool" data-role="add-tool">Add Tool</button>-->
-		<span id="addStandaloneWrapper" data-bs-toggle="tooltip" data-bs-placement="top">
-			<button type="button" class="btn btn-addtool" id="addStandalone">Add Tool</button>	
-		</span>
-		<button type="button" class="btn btn-clearrow" data-role="clear-all">Clear All</button>
+    <div class="container-fluid bb-table mt-4 mb-4">
+      <span id="addStandaloneWrapper" data-bs-toggle="tooltip" data-bs-placement="top">
+        <button type="button" class="btn btn-addtool" id="addStandalone">
+          <i class="bi bi-plus-lg"></i>
+          Add Tool
+		</button>	
+      </span>
+      <!--<button type="button" class="btn btn-clearrow" data-role="clear-all">Clear All</button>-->
+      <button type="button" class="btn btn-secondary" data-role="reset-all" id="resetall">
+		<i class="bi bi-arrow-clockwise"></i>
+		Reset
+      </button>
 	</div> 
   </section>
   <!-- Result -->
   <section id="Result">
-	<div class="container-fluid bb-table mt-4 mb-4">
-		<span id="results-heading" class="input-group-text d-none text-bold section-header mb-3">DAILY EXPOSURE SUMMARY</span>
-		<!--<label id="results-heading" class="form-label d-none text-bold">DAILY EXPOSURE SUMMARY</label>-->
-		<div id="output" class="alert result" role="alert">
-			<div class="result-header mb-2">
-			<span id="result-icon" class="result-icon"></span>
-			<span id="result-title" class="result-title"></span>
-			</div>
-			<div id="result-exposure" class="result-exposure mb-1"></div>
-			<div id="result-detail" class="result-detail mb-1"></div>
-			<div id="result-action" class="result-action mb-1"></div>
-			<div id="debug-band" style="margin-top:10px; font-size:12px; opacity:0.7; font-family:monospace;"></div>
-		</div>
+    <div class="container-fluid bb-table mt-4 mb-4">
+      <span id="results-heading" class="input-group-text d-none text-bold section-header mb-3">DAILY EXPOSURE SUMMARY</span>
+      <div id="output" class="alert result" role="alert">
+        <div class="result-header mb-2">
+          <span id="result-icon" class="result-icon"></span>
+          <span id="result-title" class="result-title"></span>
+        </div>
+        <div id="result-exposure" class="result-exposure mb-1"></div>
+        <div id="result-detail" class="result-detail mb-1"></div>
+        <div id="result-action" class="result-action mb-1"></div>
+        <div id="debug-band" style="margin-top:10px; font-size:12px; opacity:0.7; font-family:monospace;"></div>
+      </div>
 	</div>
   </section>
   <!-- Per-tool Breakdown -->
   <section id="Breakdown">
-	<div class="container-fluid bb-table mt-4 mb-4">
-		<div id="tool-breakdown-wrapper">
-			<div id="tool-breakdown"></div>
-		</div> 
+    <div class="container-fluid bb-table mt-4 mb-4">
+      <div id="tool-breakdown-wrapper">
+        <div id="tool-breakdown"></div>
+      </div> 
 	</div>
   </section>
-
-
- <!-- <section>
+<!-- <section>
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mb-4 mt-2 text-center">
@@ -531,6 +517,5 @@
   <script src="JS/bootstrap-5.3.8.js"></script>
   <script src="JS/Tools.js"></script>
   <script src="JS/Calculator.js"></script>
-
 </body>
 </html>

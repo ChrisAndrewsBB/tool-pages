@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	updateAddButton();
   });
 
+  document
+  .getElementById("resetall")
+  ?.addEventListener("click", resetAll);
+
   // Close dropdowns when clicking away
   document.addEventListener("click", (e) => {
   if (standaloneSelect && standalonePanel) {
@@ -266,6 +270,30 @@ function updateDeleteButtons() {
     btn.style.display =
       rows.length <= 1 ? "none" : "";
   });
+}
+
+function resetAll() {
+
+  const container =
+    document.getElementById("standaloneContainer");
+
+  if (!container) return;
+
+  // Remove all rows
+  container.innerHTML = "";
+
+document.getElementById("employeeName").value = "";
+document.getElementById("siteName").value = "";
+document.getElementById("startDate").value = "";
+
+  // Recreate the default row
+  addStandaloneRow(true);
+
+  // Reset results
+  updateOutput();
+  updateBreakdown();
+  updateDeleteButtons();
+  updateAddButton();
 }
 
 // #region ========== BUILD DROPDOWN ==========
