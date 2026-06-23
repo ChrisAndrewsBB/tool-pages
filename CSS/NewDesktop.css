@@ -20,6 +20,7 @@
   --Vivid_Cerulean:#00b0f0; /* BB blue line */
   --River_Blue:#3b668e;
   --Blue_Dianne:#224659; /* BB primary blue */
+  --BBFormsBlue: #39668f;
   --Alice_Blue:#eef8ff;
   --Arctic_Ice:#f4faff;
   --Dark_River_Blue: #39668f; /* BB logo secondary blue */
@@ -628,7 +629,7 @@ color: var(--White);
 	height: 35px !important;
 }
 .pdf-report {
-    display:none;
+    /*display:none;*/
 }
 @media print {
 
@@ -675,3 +676,16 @@ color: var(--White);
     background:var(--Blue_Dianne);
     color:white;
 }
+.bbformfield {
+	  background-color: var(--Dark_River_Blue);
+  color: var(--White);
+  font-weight: 600;
+}
+.hiddentd {
+	border:none;
+	background: transparent;
+}
+.reportfield {
+	width: 500px !important;
+}
+	

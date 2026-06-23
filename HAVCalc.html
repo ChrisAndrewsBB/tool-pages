@@ -347,36 +347,62 @@
 <div id="pdfReport" class="pdf-report">
 
     <div class="report-header">
-
-        <img src="Assets/Logos/BetonBauenLogo.svg"
-             class="report-logo"
-             alt="Beton Bauen">
-
-        <h1>Hand-Arm Vibration Monitoring Report</h1>
-
+      <div class="container-fluid bb-header-container">
+        <div class="row">
+          <div class="col-auto g-0" id="Blue_Bar_Column">
+            <div class="bb-rectangle"></div>
+          </div>
+          <div class="col bb-page-title-container" id="Page_Title_Column">
+            <h1 class="bb-page-title">BETON BAUEN</h1>
+            <h2 class="bb-page-subtitle">HAND-ARM VIBRATION MONITORING</h2>
+          </div>
+          <div class="col bb-logo-container" id="Logo_Column">
+            <a href="https://www.betonbauen.com/" target="_blank" rel="noopener">
+              <img class="bb-logo float-end" alt="Betonbauen logo"/>
+            </a>
+          </div>		
+        </div>
+      </div>
     </div>
 
     <div class="report-details">
 
-        <p>
-            <strong>Employee:</strong>
-            <span id="pdfEmployee"></span>
-        </p>
-
-        <p>
-            <strong>Site / Location:</strong>
-            <span id="pdfSite"></span>
-        </p>
-
-        <p>
-            <strong>Date:</strong>
-            <span id="pdfDate"></span>
-        </p>
+ <div class="container-fluid bb-table mt-4 mb-4">
+      <span class="input-group-text text-bold section-header mb-3">WORK DETAILS</span>
+      <!-- Employee name -->	  
+      <div id="Employee Name" class="row">
+        <div class="col-auto">	
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bb-input-group-text" id="nameInput">EMPLOYEE NAME:</span>
+              <span id="pdfEmployee" class="form-control text-lg-start reportfield"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Site name -->
+      <div id="Site Name" class="row">
+        <div class="col-auto">
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bb-input-group-text" id="locationInput">SITE / LOCATION:</span>
+            <span id="pdfSite" class="form-control text-lg-start reportfield"></span>
+          </div>      
+        </div>
+      </div>
+      <!-- Week -->
+      <div id="Week" class="row">
+        <div class="col-auto">
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text bb-input-group-text" id="dateInput">DATE:</span>
+            <span id="pdfDate" class="form-control text-lg-start reportfield"></span>
+          </div>      
+        </div>
+      </div>
+    </div>
 
     </div>
 
-    <table class="report-table">
-
+<div class="container-fluid bb-table mt-4 mb-4">
+      <span class="input-group-text text-bold section-header mb-3">TOOL DATA</span>
+         <table class="report-table">
         <thead>
             <tr>
                 <th>Tool</th>
@@ -391,15 +417,26 @@
         </tbody>
 
         <tfoot>
+			<tr><td class="hiddentd"><p></p></td></tr>
             <tr>
-                <td colspan="3">
-                    <strong>Total Exposure Points</strong>
+				<td colspan="1" class="hiddentd"></td>
+				<td colspan="1" class="hiddentd"></td>
+                <td colspan="1" class="bbformfield">
+                    <strong>Daily Total</strong>
                 </td>
                 <td id="pdfTotalPoints"></td>
             </tr>
         </tfoot>
 
-    </table>
+    </table>  
+	   
+	</div>
+
+
+
+
+
+
 
     <div class="report-summary">
 

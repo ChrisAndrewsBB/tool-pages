@@ -79,8 +79,9 @@ console.log(
          Replace this with your existing
          HAVS points calculation
         */
-        const points = row.dataset.points || 0;
+        const points = parseFloat(row.dataset.points) || 0;
 
+	
         totalPoints += Number(points);
 
         const tr = document.createElement("tr");
@@ -89,7 +90,7 @@ console.log(
             <td>${tool}</td>
             <td>${magnitude}</td>
             <td>${triggerTime}</td>
-            <td>${points}</td>
+            <td>${points.toFixed(0)}</td>
         `;
 
         tbody.appendChild(tr);
@@ -98,7 +99,7 @@ console.log(
 document.getElementById("pdfAction").textContent =
     document.getElementById("result-action").textContent;
     document.getElementById("pdfTotalPoints").textContent =
-        totalPoints;
+        document.getElementById("result-exposure").textContent;
 		
 		document.getElementById("pdfExposure").textContent =
     document.getElementById("result-exposure").textContent;
