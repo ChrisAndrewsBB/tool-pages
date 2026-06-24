@@ -10,23 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function generatePdfReport() {
 
+    console.log("generatePdfReport called");
+
     populatePdfReport();
 
-    console.log("Exposure:",
-        document.getElementById("pdfExposure").textContent);
-
-    console.log("Status:",
-        document.getElementById("pdfStatus").textContent);
-
-    console.log("Action:",
-        document.getElementById("pdfAction").textContent);
-
+    alert("about to print");
 
     window.print();
 
+    console.log("window.print returned");
 }
 
 function populatePdfReport() {
+
+    // Work details
 
     document.getElementById("pdfEmployee").textContent =
         document.getElementById("employeeName").value;
@@ -36,6 +33,9 @@ function populatePdfReport() {
 
     document.getElementById("pdfDate").textContent =
         document.getElementById("startDate").value;
+
+
+    // Tool table
 
     const tbody = document.getElementById("pdfToolRows");
 
@@ -47,42 +47,37 @@ function populatePdfReport() {
         "#standaloneContainer .standalone-calculator-row"
     );
 
-console.log(
-    document.querySelectorAll(
-        "#standaloneContainer .standalone-calculator-row"
-    ).length
-);
-
     rows.forEach(row => {
 
         const tool =
-            row.querySelector(".standalone-tool-select")?.textContent.trim() || "";
+            row.querySelector(".standalone-tool-select")
+                ?.textContent
+                .trim() || "";
 
         const magnitude =
-            row.querySelector(".standalone-vibration")?.value || "";
+            row.querySelector(".standalone-vibration")
+                ?.value || "";
 
         const hours =
             parseFloat(
-                row.querySelector(".standalone-hours")?.value
+                row.querySelector(".standalone-hours")
+                    ?.value
             ) || 0;
 
         const minutes =
             parseFloat(
-                row.querySelector(".standalone-minutes")?.value
+                row.querySelector(".standalone-minutes")
+                    ?.value
             ) || 0;
 
         if (!tool || tool === "Select tool") return;
 
         const triggerTime = `${hours}h ${minutes}m`;
 
-        /*
-         Replace this with your existing
-         HAVS points calculation
-        */
-        const points = parseFloat(row.dataset.points) || 0;
+        const points =
+            Number(row.dataset.points) || 0;
 
-	
-        totalPoints += Number(points);
+        totalPoints += points;
 
         const tr = document.createElement("tr");
 
@@ -90,22 +85,53 @@ console.log(
             <td>${tool}</td>
             <td>${magnitude}</td>
             <td>${triggerTime}</td>
-            <td>${points.toFixed(0)}</td>
+            <td>${Math.round(points)}</td>
         `;
 
         tbody.appendChild(tr);
 
     });
-document.getElementById("pdfAction").textContent =
-    document.getElementById("result-action").textContent;
-    document.getElementById("pdfTotalPoints").textContent =
-        document.getElementById("result-exposure").textContent;
-		
-		document.getElementById("pdfExposure").textContent =
-    document.getElementById("result-exposure").textContent;
 
-document.getElementById("pdfStatus").textContent =
-    document.getElementById("result-title").textContent;
-		
-		
+    document.getElementById("pdfTotalPoints").textContent =
+        Math.round(totalPoints);
+
+
+    // Result summary
+
+    document.getElementById("pdfExposure").textContent =
+        document.getElementById("result-exposure").textContent;
+
+    document.getElementById("pdfStatus").textContent =
+        document.getElementById("result-title").textContent;
+
+    document.getElementById("pdfDetail").textContent =
+        document.getElementById("result-detail").textContent;
+
+    document.getElementById("pdfAction").textContent =
+        document.getElementById("result-action").textContent;
+
+
+    // Copy result band styling
+
+    const output =
+        document.getElementById("output");
+
+    const pdfResult =
+        document.getElementById("pdfResult");
+
+    pdfResult.className = output.className;
+
+
+    // Copy status icon if present
+
+    const sourceIcon =
+        document.getElementById("result-icon");
+
+    const targetIcon =
+        document.getElementById("pdfResultIcon");
+
+    if (sourceIcon && targetIcon) {
+        targetIcon.innerHTML = sourceIcon.innerHTML;
+    }
+
 }
