@@ -657,8 +657,38 @@ color: var(--White);
 	width: 500px !important;
 }
 @media print {
-    * {
-        color: inherit !important;
-        background: inherit !important;
-    }
+  /* 1. Prevent Bootstrap from stripping backgrounds/colors inside your report */
+  #pdfReport, 
+  #pdfReport * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-scheme: light !important; /* Forces standard visibility if using dark mode */
+  }
+
+  /* 2. Force the report container to maintain proper desktop width layout */
+  #pdfReport,
+  .pdf-Report {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 992px !important; /* Locks layout to Bootstrap's desktop (lg) breakpoint */
+    background-color: #ffffff !important;
+  }
+
+  /* 3. Re-enforce flexbox and grid styling structures inside the report */
+  #pdfReport .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+  
+  /* Fix Bootstrap col widths so columns don't stack vertically */
+  #pdfReport [class*="col-"] {
+    float: left !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* 4. Completely hide headers, navs, and footers you do not want in the PDF */
+  body > *:not(#pdfReport) {
+    display: none !important;
+  }
 }
