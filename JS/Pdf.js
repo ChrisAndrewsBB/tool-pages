@@ -16,9 +16,11 @@ function generatePdfReport() {
 
     alert("about to print");
 
-    window.print();
+    //window.print();
 
-    console.log("window.print returned");
+
+
+    //console.log("window.print returned");
 }
 
 function populatePdfReport() {
