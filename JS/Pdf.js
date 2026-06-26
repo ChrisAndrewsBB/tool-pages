@@ -31,8 +31,15 @@ function populatePdfReport() {
     document.getElementById("pdfSite").textContent =
         document.getElementById("siteName").value;
 
+   const dateValue = document.getElementById("startDate").value;
+
+if (dateValue) {
+    const [year, month, day] = dateValue.split("-");
     document.getElementById("pdfDate").textContent =
-        document.getElementById("startDate").value;
+        `${day}/${month}/${year}`;
+} else {
+    document.getElementById("pdfDate").textContent = "";
+}
 
 
     // Tool table

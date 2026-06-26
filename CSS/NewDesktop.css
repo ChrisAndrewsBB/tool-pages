@@ -1,7 +1,11 @@
 /* #region DECLARATIONS */
 :root { 
   /* #region Logos */
-  --bblogo: url('https://static.wixstatic.com/media/3b0a9f_5a9deae6ef434173a033497fbeba288a~mv2.png');
+  --bblogo_main: url('../Assets/Logos/BetonBauenLogo_20.png');
+  --bblogo_pride:url('../Assets/Logos/BetonBauenLogo_20_Pride.png');
+  /*#endregion*/
+  /* #region Icons */
+  --bblogo_shortcut: url('../Assets/Logos/BetonBauenLogo.svg');
   /*#endregion*/
   /* #region Colours */
   --Vivid_Malachite_Green: #04e62a;
@@ -62,6 +66,28 @@
 }
 /* #endregion */
 
+/* #region ALL PAGES */
+
+/* #region ICONS */
+.bb-icon{
+  content: var(--bblogo_shortcut);
+}
+/* #endregion */
+
+/* #region NAVIGATION */
+.bb-nav {
+  background-color: var(--Vintage_Dark_Blue) !important;
+  height: 35px !important;
+}
+/* #endregion */
+
+/* #region BODY - GENERAL */
+  body {
+  font-family:Roboto,sans-serif;
+  background: #FAF9F6;
+}
+/* #endregion */
+
 /* #region TEXT - GENERAL */
 h1 {
   margin-top:15px;
@@ -84,13 +110,7 @@ h2 {
 }
 /* #endregion */
 
-/* #region NAVIGATION */
-.bb-nav {
-  background-color: var(--Vintage_Dark_Blue) !important;
-}
-/* #endregion */
-
-/* #region HEADER */
+/* #region PAGE HEADER */
 .bb-header-container {
   box-shadow: 0px 5px 5px rgb(26 26 26 / 5%);
   background: var(--White);
@@ -126,18 +146,61 @@ h2 {
  object-fit: cover;
 }
 .bb-logo {
-  max-width:100%;
+  max-width:50%;
   max-height:100%;
   margin-top: 15px;
   padding-right: 15px;
-  content: var(--bblogo);
+  content: var(--bblogo_pride);
 }
 /* #endregion */
 
-body {
-  font-family:Roboto,sans-serif;
-  background: #FAF9F6;
+/* #region SECTION HEADERS */
+.section-header {
+background-color: #1b2a41 !important;
+color: var(--White);
 }
+/* #endregion */
+
+/* #region TOOL HEADERS */
+.tool-heading[data-manufacturer="Golz"] {
+  background-color: var(--Carrot_Orange);
+  color: var(--White);
+  border-left: 0px solid var(--Vivid_Gamboge);
+}
+.tool-heading[data-manufacturer="Hilti"] {
+  background-color: var(--Traffic_Red);
+  color: var(--White);
+  border-left: 0px solid #ff9800;
+}
+.tool-heading[data-manufacturer="Makita"] {
+  background-color: var(--Water_Blue);
+  color: var(--White);
+  border-left: 0px solid #ff9800;
+}
+.tool-heading.has-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tool-heading.has-logo .mfr-text {
+  display: none;
+}
+.tool-heading.no-logo .manufacturer-logo {
+  display: none;
+}
+.manufacturer-logo {
+  display: block;
+  max-height: 16px;
+  width: auto;
+}
+/* #endregion */
+
+.row {
+	margin-top: calc(0 * var(--bs-gutter-y)) !important;
+}
+/* #endregion */
+
+/* #region HAVS PAGE */
 
 /* #region MODALS */
 .btn-popup {
@@ -177,7 +240,7 @@ body {
 }
 /* #endregion */
 
-/* #region DATA ENTRY */
+/* #region JOB DATA ENTRY */
 .bb-data-entry-container {
   margin-left: 5px;
 }
@@ -195,8 +258,7 @@ input[id="employeeName"], input[id="siteName"], input[id="startDate"] {
 }
 /* #endregion */
 
-
-/* #region STANDALONE DATA */
+/* #region TOOL DATA ENTRY */
 .compact .compact-label {
     visibility: hidden;
 }
@@ -205,10 +267,57 @@ input[id="employeeName"], input[id="siteName"], input[id="startDate"] {
   flex-direction: column;
   gap: 8px;
 }
-.standalone-tool-select,
-.standalone-hours,
-.standalone-minutes {
+.standalone-tool-select,.standalone-hours,.standalone-minutes {
     height: 38px;
+}
+.tool-selected {
+  cursor: pointer;
+  width: 100%;
+  display: block !important;
+  box-sizing: border-box;
+}
+.tool-dropdown {
+  width: 100% !important;
+  display: block !important;
+}
+.tool-panel {
+  position: absolute !important; /* !important ensures custom rules don't block it */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* Ensures it floats over the top of the input borders below it */
+}
+.tool-dropdown .tool-panel {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  width: 100% !important; /* Forces the open list to perfectly lock to the selector width */
+  box-sizing: border-box !important; /* Prevents border pixels from causing overflow layout drops */
+}
+/* #endregion */
+
+/* #region BUTTONS */
+.btn-addtool {
+  --bs-btn-color: var(--White);
+  --bs-btn-bg: var(--Vivid_Cerulean);
+  --bs-btn-border-color: var(--Calming_Blue_Grey);
+  --bs-btn-hover-color: var(--White);
+  --bs-btn-hover-bg: var(--Dark_River_Blue);
+  --bs-btn-hover-border-color: var(--Dark_River_Blue);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--White);
+  --bs-btn-active-bg: var(--Misty_Blue_Grey);
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--White);
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
+.btn-delete {
+	max-height: 40px;
+}
+.fs-2 {
+    font-size: calc(1.325rem + 0vw) !important;
 }
 
 /* #endregion */
@@ -227,7 +336,6 @@ table {
   font-size:14px;
   table-layout: fixed;
 }
-
 /* -- base headers -- */
 th {
   border:1px solid var(--Smooth_Grey);
@@ -235,34 +343,6 @@ th {
   text-align:center;
   background: var(--River_Blue);
   color:var(--White);
-}
-/* -- specfic headers -- */
-.tool-selection-header {
- border-top-left-radius: 6px;
- width: 380px;
-}
-.vibration-magnitude-header,.time-to-eav-header,.time-to-elv-header {
-  width: 180px;
-}
-.exposure-points-header {
-  width: 340px;
-}
-.trigger-time-header {
-  width: 360px;
-}
-.partial-exposure-header {
-  border-top-right-radius: 6px;
-  width: 180px;
-}
-.row-actions-header {
-  display: none;
-}
-/* -- base rows -- */
-#toolTable,#toolTable tr {
-  overflow: visible;
-}
-#toolTable tr {
-  position: relative;
 }
 /* -- base cells -- */
 td {
@@ -274,23 +354,7 @@ td {
   position: relative;
   overflow: visible;
 }
-/* -- specific cells -- */
-/*td[class="extra-info p15"] {
-  border:1px solid var(--Smooth_Grey);
-  padding:6px;
-  text-align:center;
-  background: var(--Carrot_Orange) !important;
-  color:var(--White);
-  width: 10px;
-}*/
-.row-actions {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  background: none;
-  border: none;
-  display:inline-flex;
-}
+
 /* -- tool dropdown -- */
 
 .tool-panel.open {
@@ -398,93 +462,7 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
   cursor: not-allowed;
   pointer-events: none;
 }
-.btn-remove::before {
-  /*content: "✖ ";*/
-}
-/* #endregion */
 
-/* #region NEW SELECTOR */
-.tool-selected {
-  cursor: pointer;
-  width: 100%;
-  display: block !important;
-  box-sizing: border-box;
-}
-.tool-dropdown {
-  width: 100% !important;
-  display: block !important;
-}
-.tool-panel {
-  position: absolute !important; /* !important ensures custom rules don't block it */
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 1050; /* Ensures it floats over the top of the input borders below it */
-}
-.tool-dropdown .tool-panel {
-  position: absolute !important;
-  top: 100% !important;
-  left: 0 !important;
-  width: 100% !important; /* Forces the open list to perfectly lock to the selector width */
-  box-sizing: border-box !important; /* Prevents border pixels from causing overflow layout drops */
-}
-.tool-heading[data-manufacturer="Golz"] {
-  background-color: var(--Carrot_Orange); /* Your recommended lighter yellow */
-  color: var(--White);
-  border-left: 0px solid #ff9800;
-}
-.tool-heading[data-manufacturer="Hilti"] {
-  background-color: var(--Traffic_Red); /* Your recommended lighter yellow */
-  color: var(--White);
-  border-left: 0px solid #ff9800;
-  /*background-image:url("../Assets/Icons/manufacturers/Hilti.svg");*/
-}
-.tool-heading[data-manufacturer="Makita"] {
-  background-color: var(--Water_Blue); /* Your recommended lighter yellow */
-  color: var(--White);
-  border-left: 0px solid #ff9800;
-}
-.manufacturer-logo {
-  display: block;
-  max-height: 16px;
-  width: auto;
-}
-.tool-heading.has-logo .mfr-text {
-  display: none;
-}
-
-.tool-heading.no-logo .manufacturer-logo {
-  display: none;
-}
-
-.tool-heading.has-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-/* #endregion */
-
-/* #region BUTTONS */
-.btn-addtool {
-  --bs-btn-color: var(--White);
-  --bs-btn-bg: var(--Vivid_Cerulean);
-  --bs-btn-border-color: var(--Calming_Blue_Grey);
-  --bs-btn-hover-color: var(--White);
-  --bs-btn-hover-bg: var(--Dark_River_Blue);
-  --bs-btn-hover-border-color: var(--Dark_River_Blue);
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: var(--White);
-  --bs-btn-active-bg: var(--Misty_Blue_Grey);
-  --bs-btn-active-border-color: #0a53be;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: var(--White);
-  --bs-btn-disabled-bg: #0d6efd;
-  --bs-btn-disabled-border-color: #0d6efd;
-}
-
-.btn-delete {
-	max-height: 40px;
-}
 /* #endregion */
 
 /* #region RESULTS */
@@ -569,6 +547,8 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
   display: block;
 }
 /* #endregion */
+
+/* #region TOOL STATUS */
 .tool-status-indicator {
 	all: unset;
   position: absolute;
@@ -584,7 +564,6 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
   flex: 0 0 4px;
   flex-shrink: 0;
 }
-
 .tool-status-indicator.inactive {
   opacity: 0;
 }
@@ -608,13 +587,26 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
   opacity: 1;
   background: var(--Digital_Red);
 }
-.fs-2 {
-    font-size: calc(1.325rem + 0vw) !important;
+/* #endregion */
+
+/* #region HAVS Report Specific */
+.reportfield {
+	width: 500px !important;
 }
-.section-header {
-background-color: #1b2a41 !important;
-color: var(--White);
+.bbformfield {
+	  background-color: #39668f;
+  color: var(--White);
+  font-weight: 600;
 }
+.report-table th {
+    background:var(--Blue_Dianne);
+    color:white;
+}
+/* #endregion */
+
+/* #endregion */
+
+/* #region TOOL NOISE PAGE */
 .noise-alert {
   --bs-alert-color: var(--Tar);
   --bs-alert-bg: #eaf7fc ;
@@ -625,70 +617,15 @@ color: var(--White);
 .badge {
 --bs-badge-font-size: 1.5em !important;
 }
-.row {
-	margin-top: calc(0 * var(--bs-gutter-y)) !important;
-}
-.navbar {
-	height: 35px !important;
-}
-.pdf-report {
-    /*display:none;*/
-}
+/* #endregion */
 
-.report-header {
-    border-bottom:4px solid #00b0f0;
-    margin-bottom:20px;
-}
-
-.report-table th {
-    background:var(--Blue_Dianne);
-    color:white;
-}
-.bbformfield {
-	  background-color: #39668f;
-  color: var(--White);
-  font-weight: 600;
-}
-.hiddentd {
-	border:none;
-	background: transparent;
-}
-.reportfield {
-	width: 500px !important;
-}
 @media print {
-  /* 1. Prevent Bootstrap from stripping backgrounds/colors inside your report */
-  #pdfReport, 
-  #pdfReport * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    color-scheme: light !important; /* Forces standard visibility if using dark mode */
+    #Navigation, #Page_Header, #Popup_Buttons, #Data_Entry, #Standalone_Table, #Table_Buttons, #Result, #Breakdown {
+        display: none !important;
+    }
+
   }
 
-  /* 2. Force the report container to maintain proper desktop width layout */
-  #pdfReport,
-  .pdf-Report {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 992px !important; /* Locks layout to Bootstrap's desktop (lg) breakpoint */
-    background-color: #ffffff !important;
-  }
 
-  /* 3. Re-enforce flexbox and grid styling structures inside the report */
-  #pdfReport .row {
-    display: flex !important;
-    flex-wrap: wrap !important;
-  }
-  
-  /* Fix Bootstrap col widths so columns don't stack vertically */
-  #pdfReport [class*="col-"] {
-    float: left !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* 4. Completely hide headers, navs, and footers you do not want in the PDF */
-  body > *:not(#pdfReport) {
-    display: none !important;
-  }
-}
+
+

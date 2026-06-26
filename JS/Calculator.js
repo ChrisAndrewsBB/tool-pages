@@ -405,7 +405,7 @@ opt.addEventListener("click", e => {
 	img.className = "manufacturer-logo";
 	img.alt = mfrDisplay;
 	img.src = `./Assets/Logos/${mfrDisplay}.svg`;
-	img.loading = "lazy";
+	img.loading = "eager";
 	
 	mfrHeader.classList.add("no-logo");
 	img.onload = () => {
