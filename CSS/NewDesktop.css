@@ -84,7 +84,7 @@
 /* #region BODY - GENERAL */
   body {
   font-family:Roboto,sans-serif;
-  background: #FAF9F6;
+  background: var(--Off_White_Grey);
 }
 /* #endregion */
 
@@ -617,7 +617,40 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
 .badge {
 --bs-badge-font-size: 1.5em !important;
 }
+.noise-tool-heading {
+  padding: 10px 10px;
+}
+.noise-tool-subheading {
+  padding: 6px 6px;
+  background-color: var(--Calming_Blue_Grey);
+  text-transform: uppercase;
+}
 /* #endregion */
+#pdfReport{
+    width:794px;
+    margin:auto;
+    background:white;
+}
+#pdfResultIcon svg{
+    width:40px;
+    height:40px;
+}
+#pdfReport .bb-header-container{
+    width:100%;
+}
+
+#pdfReport .row{
+    flex-wrap:nowrap;
+}
+
+#pdfReport .bb-page-title-container{
+    flex:1;
+}
+
+#pdfReport .bb-logo-container{
+    width:180px;
+    flex:0 0 180px;
+}
 
 @media print {
     #Navigation, #Page_Header, #Popup_Buttons, #Data_Entry, #Standalone_Table, #Table_Buttons, #Result, #Breakdown {

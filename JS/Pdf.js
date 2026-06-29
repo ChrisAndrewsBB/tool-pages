@@ -18,10 +18,28 @@ function generatePdfReport() {
 
     //window.print();
 
+requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
 
+        html2pdf()
+            .set({
+                filename: "HAVS Report.pdf",
+                margin: 1,
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true
+                },
+                jsPDF: {
+                    unit: "mm",
+                    format: "a4",
+                    orientation: "portrait"
+                }
+            })
+            .from(document.getElementById("pdfReport"))
+            .save();
 
-    //console.log("window.print returned");
-}
+    });
+});
 
 function populatePdfReport() {
 
@@ -143,4 +161,4 @@ if (dateValue) {
         targetIcon.innerHTML = sourceIcon.innerHTML;
     }
 
-}
+}}

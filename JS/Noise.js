@@ -95,10 +95,39 @@ function renderToolBreakdown(grouped) {
 
   manufacturers.sort().forEach(mfr => {
 
-    const mfrBlock = document.createElement("div");
-    mfrBlock.className = "mb-4";
+   const mfrBlock = document.createElement("div");
+mfrBlock.className = "mb-4";
 
-    mfrBlock.innerHTML = `<h3 class="mb-3">${mfr}</h3>`;
+const mfrHeader = document.createElement("div");
+mfrHeader.className = "input-group-text tool-heading noise-tool-heading mb-3";
+mfrHeader.dataset.manufacturer = mfr;
+
+const textSpan = document.createElement("span");
+textSpan.className = "mfr-text";
+textSpan.textContent = mfr;
+mfrHeader.appendChild(textSpan);
+
+const img = document.createElement("img");
+img.className = "manufacturer-logo";
+img.alt = mfr;
+img.src = `./Assets/Logos/${mfr}.svg`;
+img.loading = "eager";
+
+mfrHeader.classList.add("no-logo");
+
+img.onload = () => {
+    mfrHeader.classList.remove("no-logo");
+    mfrHeader.classList.add("has-logo");
+};
+
+img.onerror = () => {
+    mfrHeader.classList.remove("has-logo");
+    mfrHeader.classList.add("no-logo");
+};
+
+mfrHeader.appendChild(img);
+
+mfrBlock.appendChild(mfrHeader);
 
     const types = Object.keys(grouped[mfr]).sort();
 
@@ -107,7 +136,7 @@ function renderToolBreakdown(grouped) {
       const typeBlock = document.createElement("div");
       typeBlock.className = "mb-3 ps-3";
 
-      typeBlock.innerHTML = `<h5 class="mb-2">${type}</h5>`;
+      typeBlock.innerHTML = `<h5 class="mb-2 input-group-text tool-heading noise-tool-subheading">${type}</h5>`;
 
       grouped[mfr][type]
         .sort((a, b) => a.name.localeCompare(b.name))
