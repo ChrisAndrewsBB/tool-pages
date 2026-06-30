@@ -626,31 +626,7 @@ input[class="magnitude"],input[class="hours"],input[class="minutes"],select {
   text-transform: uppercase;
 }
 /* #endregion */
-#pdfReport{
-    width:794px;
-    margin:auto;
-    background:white;
-}
-#pdfResultIcon svg{
-    width:40px;
-    height:40px;
-}
-#pdfReport .bb-header-container{
-    width:100%;
-}
 
-#pdfReport .row{
-    flex-wrap:nowrap;
-}
-
-#pdfReport .bb-page-title-container{
-    flex:1;
-}
-
-#pdfReport .bb-logo-container{
-    width:180px;
-    flex:0 0 180px;
-}
 
 @media print {
     #Navigation, #Page_Header, #Popup_Buttons, #Data_Entry, #Standalone_Table, #Table_Buttons, #Result, #Breakdown {
