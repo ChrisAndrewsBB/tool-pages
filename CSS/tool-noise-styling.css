@@ -1,0 +1,18 @@
+.noise-alert {
+  --bs-alert-color: var(--Tar);
+  --bs-alert-bg: var(--Snowbound) ;
+  --bs-alert-border-color: var(--French_Pass);
+  --bs-alert-link-color: var(--Tar);
+  border-left:6px solid var(--Vivid_CeruleanS);}
+
+.badge {
+--bs-badge-font-size: 1.5em !important;}
+
+.noise-tool-heading {
+  padding: 10px 10px;}
+
+.noise-tool-subheading {
+  padding: 6px 6px;
+  background-color: var(--Calming_Blue_Grey);
+  text-transform: uppercase;}
+

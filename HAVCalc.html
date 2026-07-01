@@ -5,11 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Page title -->
   <title>HAVS CALCULATOR | Beton Bauen Ltd</title>
   <!-- Stylesheets -->
   <link rel="stylesheet" href="CSS/bootstrap-5.3.8.css" > <!-- Import bootstrap stylesheet -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> <!-- Import bootstrap icons -->
   <link rel="stylesheet" href="CSS/NewDesktop.css" type="text/css"> <!-- Import base stylesheet -->
+  <link rel="stylesheet" href="css/hav-calc-styling.css" type="text/css">
   <!-- Icons -->
   <link rel="icon" sizes="192x192" class="bb-icon">
   <link rel="shortcut icon" class="bb-icon">
@@ -45,7 +47,7 @@
   <section id="Page Header">
     <header>
       <div class="container-fluid bb-header-container">
-        <div class="row">
+        <div class="row bb-row">
           <div class="col-auto g-0" id="Blue_Bar_Column">
             <div class="bb-rectangle"></div>
           </div>
@@ -64,17 +66,17 @@
   </section>
   <!-- Popup modals -->
   <section id="Popup buttons">
-    <div class="container-fluid bbmodal-buttonrow pb-0 mb-4">
-      <div class="row">
+    <div class="container-fluid bb-modal-button-row pb-0 mb-4">
+      <div class="row bb-row">
         <div id="Popup1" class="col-auto">
           <!-- Modal Trigger -->
-          <button type="button" class="btn btn-popup" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"> WHAT IS HAND-ARM VIBRATION SYNDROME ? </button>
+          <button type="button" class="btn bb-modal-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"> WHAT IS HAND-ARM VIBRATION SYNDROME ? </button>
           <!-- Modal -->
           <div class="modal fade modal-xl" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered ">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5 bbmodal-title w-100" id="staticBackdropLabel1">What is Hand-Arm Vibration Syndrome ?</h1>
+                  <h1 class="modal-title fs-5 bb-modal-title w-100" id="staticBackdropLabel1">What is Hand-Arm Vibration Syndrome ?</h1>
                 </div>
                 <div class="modal-body">
                   <div class="popupcontent">
@@ -95,7 +97,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="modal-footer bbmodal-footer">
+                <div class="modal-footer bb-modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
@@ -104,13 +106,13 @@
         </div>
         <div id="Popup2" class="col-auto">
           <!-- Modal Trigger -->
-          <button type="button" class="btn btn-popup" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"> WHAT ARE THE HAVS EXPOSURE LIMITS ? </button>
+          <button type="button" class="btn bb-modal-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"> WHAT ARE THE HAVS EXPOSURE LIMITS ? </button>
           <!-- Modal -->
           <div class="modal fade modal-xl" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered ">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5 bbmodal-title w-100" id="staticBackdropLabel2">what are the havs exposure limits ?</h1>
+                  <h1 class="modal-title fs-5 bb-modal-title w-100" id="staticBackdropLabel2">what are the havs exposure limits ?</h1>
                 </div>
                 <div class="modal-body">
 				<div class="popupcontent">
@@ -124,7 +126,7 @@
                   </p>
 				</div>
                 </div>
-                <div class="modal-footer bbmodal-footer">
+                <div class="modal-footer bb-modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
@@ -133,13 +135,13 @@
         </div>
         <div id="Popup3" class="col-auto">
           <!-- Modal Trigger -->
-          <button type="button" class="btn btn-popup" data-bs-toggle="modal" data-bs-target="#staticBackdrop3"> HOW TO CALCULATE HAND-ARM VIBRATION EXPOSURE </button>
+          <button type="button" class="btn bb-modal-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop3"> HOW TO CALCULATE HAND-ARM VIBRATION EXPOSURE </button>
           <!-- Modal -->
           <div class="modal fade modal-xl" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered ">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5 bbmodal-title w-100" id="staticBackdropLabel3">how to calculate hand-arm vibration exposure</h1>
+                  <h1 class="modal-title fs-5 bb-modal-title w-100" id="staticBackdropLabel3">how to calculate hand-arm vibration exposure</h1>
                 </div>
                 <div class="modal-body">
                   <div class="popupcontent">
@@ -150,7 +152,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="modal-footer bbmodal-footer">
+                <div class="modal-footer bb-modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -159,7 +161,7 @@
         </div>
         <div id="Popup4" class="col-auto" >
           <!-- Modal Trigger -->
-          <button type="button" class="btn btn-popup" data-bs-toggle="modal" data-bs-target="#staticBackdrop4"> HAND-ARM VIBRATION EXPOSURE REFERENCE </button>
+          <button type="button" class="btn bb-modal-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop4"> HAND-ARM VIBRATION EXPOSURE REFERENCE </button>
           <!-- Modal -->
           <div class="modal fade modal-lg" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered ">
@@ -183,7 +185,7 @@
                     <p class="ref-note">A(8) represents the daily 8-hour time-weighted vibration exposure.</p>
                   </div>
                 </div>
-                <div class="modal-footer bbmodal-footer">
+                <div class="modal-footer bb-modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
@@ -193,18 +195,18 @@
       </div>
     </div>
   </section>
-  <!-- Data entry -->
+  <!-- Work details -->
   <section id="Data Entry">
     <div></div>
     <div></div>
-    <div class="container-fluid bb-table mt-4 mb-4">
-      <span class="input-group-text text-bold section-header mb-3">WORK DETAILS</span>
+    <div class="container-fluid bb-section-container">
+      <span class="input-group-text text-bold bb-section-header">WORK DETAILS</span>
       <!-- Employee name -->	  
-      <div id="Employee Name" class="row">
-        <div class="col-auto">	
+      <div id="Employee Name" class="row bb-row">
+        <div class="col-auto">
           <div class="input-group input-group-sm mb-2">
-            <span class="input-group-text bb-input-group-text" id="nameInput">EMPLOYEE NAME:</span>
-              <input type="text" class="form-control text-lg-start" id="employeeName" placeholder="Name" aria-describedby="nameInput">
+            <span class="input-group-text bb-input-group-label" id="nameInput">EMPLOYEE NAME:</span>
+            <input type="text" class="form-control text-lg-start bb-text-input" id="employeeName" placeholder="Name" aria-describedby="nameInput">
           </div>
         </div>
       </div>
@@ -212,8 +214,8 @@
       <div id="Site Name" class="row">
         <div class="col-auto">
           <div class="input-group input-group-sm mb-2">
-            <span class="input-group-text bb-input-group-text" id="locationInput">SITE / LOCATION:</span>
-            <input type="text" class="form-control text-lg-start" id="siteName" placeholder="Site / location" aria-describedby="locationInput">
+            <span class="input-group-text bb-input-group-label" id="locationInput">SITE / LOCATION:</span>
+            <input type="text" class="form-control text-lg-start bb-text-input" id="siteName" placeholder="Site / location" aria-describedby="locationInput">
           </div>      
         </div>
       </div>
@@ -221,108 +223,115 @@
       <div id="Week" class="row">
         <div class="col-auto">
           <div class="input-group input-group-sm mb-2">
-            <span class="input-group-text bb-input-group-text" id="dateInput">DATE:</span>
-            <input type="date" class="form-control text-lg-start" id="startDate" placeholder="dd/mm/yyyy" aria-describedby="dateInput">
+            <span class="input-group-text bb-input-group-label" id="dateInput">DATE:</span>
+            <input type="date" class="form-control text-lg-start bb-date-input" id="startDate" placeholder="dd/mm/yyyy" aria-describedby="dateInput">
           </div>      
         </div>
       </div>
     </div>
   </section>
+  <!-- Tool data -->
   <section id="StandaloneTable">
-    <div class="container-fluid bb-table mt-4 mb-4">
-      <span class="input-group-text text-bold section-header mb-3">TOOL DATA</span>
-        <template id="standaloneToolTemplateFull">
-          <div class="standalone-calculator-row" data-tool-name="" data-magnitude="0">
-            <div class="row align-items-end g-2 gy-0">
-              <div class="col-md-5 position-relative pt-0 mt-0">
-                <div class="tool-status-indicator"></div>
-                <div class="tool-dropdown">
-                  <!--<label class="text-muted compact-label">Tool selection</label>-->
-                  <div class="standalone-tool-select tool-selected form-select text-start py-2" style="cursor: pointer; min-height: 38px;">Select tool</div>
-                  <div class="standalone-tool-panel tool-panel border rounded shadow-lg mt-1 bg-white" style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;"></div>
-                </div>
-              </div>
-              <div class="col-6 col-md-2 pt-0 mt-0">
-                <!--<label class="text-muted compact-label">Vibration Magnitude</label>-->
-                <input class="standalone-vibration vibration form-control text-center" type="number" min="0" max="12">
-              </div>
-              <div class="col-6 col-md-2 pt-0 mt-0">
-                <!--<label class="text-muted compact-label">Hours used</label>-->
-                  <input class="standalone-hours hours form-control text-center" type="number" min="0" max="12">
-              </div>
-              <div class="col-6 col-md-2 pt-0 mt-0">
-                <!-- <label class="text-muted compact-label">Minutes used</label>-->
-                <input class="standalone-minutes minutes form-control text-center" type="number" min="0" max="59">
-              </div>
-              <div class="remove-wrap col-1">
-                <button type="button" class="btn px-0 btn-delete" data-role="remove-row">
-                  <i class="bi bi-trash-fill fs-2" style="color:#999"></i>
-                </button>
+    <div class="container-fluid bb-section-container">
+      <span class="input-group-text text-bold bb-section-header">TOOL DATA</span>
+      <template id="bb-tool-template-full">
+        <div class="bb-tool-row" data-tool-name="" data-magnitude="0">
+          <div class="row align-items-end g-2 gy-0">
+            <div class="col-md-5 position-relative pt-0 mt-0">
+              <!-- Tool status indicator -->  
+              <div class="bb-tool-status-indicator"></div>
+              <!-- Tool selector -->    
+              <div class="bb-tool-dropdown">
+                <div class="bb-tool-select bb-tool-selected form-select py-2" style="cursor: pointer; min-height: 38px;">Select tool</div>
+                <div class="bb-tool-panel border rounded shadow-lg mt-1 bg-white" style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;"></div>
               </div>
             </div>
-          </div>
-		</template>
-        <template id="standaloneToolTemplateCompact">
-          <div class="standalone-calculator-row compact" data-tool-name="" data-magnitude="0">
-            <div class="row align-items-end g-2 gy-0">
-              <div class="col-md-5 position-relative pt-0 mt-0">
-                <div class="tool-status-indicator"></div>
-                  <div class="tool-dropdown">
-                    <div class="standalone-tool-select tool-selected form-select text-start py-2" style="cursor: pointer; min-height: 38px;">Select tool</div>
-                    <div class="standalone-tool-panel tool-panel border rounded shadow-lg mt-1 bg-white" style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;"></div>
-                  </div>
-              </div>
-              <div class="col-6 col-md-2 pt-0 mt-0">
-                <input class="standalone-vibration vibration form-control text-center" type="number" min="0" max="12">
-              </div>
-              <div class="col-6 col-md-2 pt-0 mt-0">
-                <input class="standalone-hours hours form-control text-center" type="number" min="0" max="12">
-              </div>
-              <div class="col-6 col-md-2 pt-0 mt-0">
-                <input class="standalone-minutes minutes form-control text-center" type="number" min="0" max="59">
-              </div>
-              <div class="remove-wrap col-md-1 pt-0 mt-0">
-                <button type="button" class="btn px-0 btn-delete" data-role="remove-row">
-                  <i class="bi bi-trash-fill fs-2" style="color:#999"></i>
-                </button>
-              </div>
-
+            <!-- Vibration magnitude input -->    
+            <div class="col-6 col-md-2 pt-0 mt-0">
+              <input class="form-control bb-vibration-input" type="number" min="0" max="12">
+            </div>
+            <!-- Trigger hours input -->    
+            <div class="col-6 col-md-2 pt-0 mt-0">
+              <input class="form-control bb-hours-input" type="number" min="0" max="12">
+            </div>
+            <!-- Trigger minutes input -->    
+            <div class="col-6 col-md-2 pt-0 mt-0">
+              <input class="form-control bb-minutes-input" type="number" min="0" max="59">
+            </div>
+            <!-- Delete row button -->  
+            <div class="remove-wrap col-1">
+              <button type="button" class="btn px-0 btn-delete" data-role="remove-row">
+                <i class="bi bi-trash-fill bb-button-icon" style="color:#999"></i>
+              </button>
             </div>
           </div>
-        </template>	
-        <div class="row g-2 pb-2 tool-header-row">
-          <div class="col-md-5">Tool</div>
-          <div class="col-6 col-md-2">Vibration magnitude (m/s²)</div>
-          <div class="col-6 col-md-2">Hours used</div>
-          <div class="col-6 col-md-2">Minutes used</div>
-          <div class="remove-wrap col-md-1 pt-0 mt-0"></div>
-		</div>
-		<div id="standaloneContainer"></div>
-	</div>
+        </div>
+      </template>
+      <template id="bb-tool-template-compact">
+        <div class="bb-tool-row compact" data-tool-name="" data-magnitude="0">
+          <div class="row align-items-end g-2 gy-0">
+            <div class="col-md-5 position-relative pt-0 mt-0">
+              <div class="bb-tool-status-indicator"></div>
+              <!-- Tool selector -->    
+              <div class="bb-tool-dropdown">
+                <div class="bb-tool-select bb-tool-selected form-select py-2" style="cursor: pointer; min-height: 38px;">Select tool</div>
+                <div class="bb-tool-panel border rounded shadow-lg mt-1 bg-white" style="display:none; position:absolute; top:100%; left:0; width:100%; z-index:1060; max-height:250px; overflow-y:auto;"></div>
+              </div>
+            </div>
+            <!-- Vibration magnitude input -->    
+            <div class="col-6 col-md-2 pt-0 mt-0">
+              <input class="form-control bb-vibration-input" type="number" min="0" max="12">
+            </div>
+            <!-- Trigger hours input -->    
+            <div class="col-6 col-md-2 pt-0 mt-0">
+              <input class="form-control bb-hours-input" type="number" min="0" max="12">
+            </div>
+            <!-- Trigger minutes input -->    
+            <div class="col-6 col-md-2 pt-0 mt-0">
+              <input class="form-control bb-minutes-input" type="number" min="0" max="59">
+            </div>
+            <!-- Delete row button -->  
+            <div class="remove-wrap col-1">
+              <button type="button" class="btn px-0 btn-delete" data-role="remove-row">
+                <i class="bi bi-trash-fill bb-button-icon" style="color:#999"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </template>	
+      <div class="row g-2 pb-2 tool-header-row">
+        <div class="col-md-5">Tool</div>
+        <div class="col-6 col-md-2">Vibration magnitude (m/s²)</div>
+        <div class="col-6 col-md-2">Hours used</div>
+        <div class="col-6 col-md-2">Minutes used</div>
+        <div class="remove-wrap col-md-1 pt-0 mt-0"></div>
+      </div>
+      <div id="bb-standalone-container"></div>
+    </div>
   </section>
   <section id="Table-Buttons">
-    <div class="container-fluid bb-table mt-4 mb-4">
+    <div class="container-fluid bb-section-container">
       <span id="addStandaloneWrapper" data-bs-toggle="tooltip" data-bs-placement="top">
-        <button type="button" class="btn btn-addtool" id="addStandalone">
+        <button type="button" class="btn bb-btn-add-tool" id="addStandalone">
           <i class="bi bi-plus-lg"></i>
           Add Tool
-		</button>	
+        </button>	
       </span>
       <!--<button type="button" class="btn btn-clearrow" data-role="clear-all">Clear All</button>-->
-      <button type="button" class="btn btn-secondary" data-role="reset-all" id="resetall">
-		<i class="bi bi-arrow-clockwise"></i>
-		Reset
+      <button type="button" class="btn bb-btn-reset" data-role="reset-all" id="resetall">
+        <i class="bi bi-arrow-clockwise"></i>
+        Reset
       </button>
-		      <button type="button" class="btn btn-secondary" id="generatePdf">
-		<i class="bi bi-printer"></i>
-		Print
+      <button type="button" class="btn bb-btn-print-report" id="generatePdf">
+        <i class="bi bi-printer"></i>
+        Print
       </button>
-	</div> 
+    </div> 
   </section>
   <!-- Result -->
   <section id="Result">
-    <div class="container-fluid bb-table mt-4 mb-4">
-      <span id="results-heading" class="input-group-text d-none text-bold section-header mb-3">DAILY EXPOSURE SUMMARY</span>
+    <div class="container-fluid bb-section-container">
+      <span id="results-heading" class="input-group-text text-bold bb-section-header d-none">DAILY EXPOSURE SUMMARY</span>
       <div id="output" class="alert result" role="alert">
         <div class="result-header mb-2">
           <span id="result-icon" class="result-icon"></span>
@@ -333,7 +342,7 @@
         <div id="result-action" class="result-action mb-1"></div>
         <div id="debug-band" style="margin-top:10px; font-size:12px; opacity:0.7; font-family:monospace;"></div>
       </div>
-	</div>
+    </div>
   </section>
   <!-- Per-tool Breakdown -->
   <section id="Breakdown">
@@ -341,305 +350,112 @@
       <div id="tool-breakdown-wrapper">
         <div id="tool-breakdown"></div>
       </div> 
-	</div>
-  </section>
-
-
-
-<!-- <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mb-4 mt-2 text-center">
-          <h2>ABOUT US</h2>
-        </div>
-      </div>
-    </div>
-    <div class="container ">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-          <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/140X140.gif"
-            data-holder-rendered="true">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-          <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/140X140.gif"
-            data-holder-rendered="true">
-          <h3>Lorem ipsum dolor</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-          <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/140X140.gif"
-            data-holder-rendered="true">
-          <h3>Lorem ipsum dolor</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-          <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/140X140.gif"
-            data-holder-rendered="true">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-          <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/140X140.gif"
-            data-holder-rendered="true">
-          <h3>Lorem ipsum dolor</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-          <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;" src="images/140X140.gif"
-            data-holder-rendered="true">
-          <h3>Lorem ipsum</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 mt-4 mb-2 text-center">
-          <h2>TESTIMONIALS</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-lg-6">
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <small class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></small>
-          </blockquote>
-        </div>
-        <div class="col-sm-6 col-lg-6">
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <small class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></small>
-          </blockquote>
-        </div>
-        <div class="col-sm-6 col-lg-6">
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <small class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></small>
-          </blockquote>
-        </div>
-        <div class="col-sm-6 col-lg-6">
-          <blockquote class="blockquote">
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <small class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></small>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-    <div class="bg-light p-5 rounded-3">
-      <div class="container">
-        <div class="row">
-          <div class="text-center col-md-8 col-12 mx-auto">
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, praesentium, autem, veritatis error quidem eos fuga atque asperiores magnam deleniti necessitatibus sequi</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 mx-auto"> <a class="btn btn-success btn-lg d-block w-100" href="#" title="">Sign up now!</a> </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mb-2 text-center">
-          <h2>OUR SERVICES</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-lg-4">
-          <h3>Feature Description</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt impedit est voluptatem doloremque architecto corporis suscipit quidem ratione! Quis laborum nam optio dolorem doloremque ex nobis quibusdam ad quo dolores? </p>
-          <p><a class="btn btn-link" href="http://www.adobe.com">View details »</a></p>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3>Feature Description</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, illo, libero esse assumenda culpa consequatur exercitationem beatae odio praesentium nihil iste ipsum reiciendis pariatur. Recusandae, reiciendis quidem eaque aut ab. </p>
-          <p><a class="btn btn-link" href="http://www.adobe.com">View details »</a></p>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3>Feature Description</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, adipisci recusandae veniam laudantium distinctio temporibus eveniet dolorum earum iusto veritatis provident ducimus minima dolore quas vel omnis cumque voluptas quibusdam.</p>
-          <p><a class="btn btn-link" href="http://www.adobe.com">View details »</a></p>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3>Feature Description</h3>
-          <p> <em class="icon-desktop "></em> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, earum rem nostrum provident repellat inventore laborum deleniti quas facere Quasi impedit autem qui cupiditate modi vero vitae dolorum nisi explicabo ea dolores animi. Inventore, omnis.</p>
-          <p><a class="btn btn-link" href="http://www.adobe.com">View details »</a></p>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3>Feature Description</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, iure, perspiciatis, ab ad quia animi esse repudiandae tempore quisquam dolorem sequi voluptatum qui fugiat. Quasi impedit autem qui cupiditate iusto?</p>
-          <p><a class="btn btn-link" href="http://www.adobe.com">View details »</a></p>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <h3>Feature Description</h3>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, aut, hic laudantium reprehenderit sapiente nemo consequatur corrupti accusantium! Hic, non rerum nihil reprehenderit excepturi explicabo error tempore aliquam eveniet odit.</p>
-          <p><a class="btn btn-link" href="http://www.adobe.com">View details »</a></p>
-        </div>
-      </div>
     </div>
   </section>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-8 mx-auto">
-        <div class="bg-light p-5 rounded-3">
-          <div class="row text-center">
-            <div class="col-12">
-              <h2>Request a free quote</h2>
-            </div>
-            <div class="col-12">
-              <form id="feedbackForm" class="text-center">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" aria-describedby="nameHelp">
-                  <label for="name">Name</label>
-                </div>
-                <div id="nameHelp" class="form-text text-muted" style="display: none;">Please enter your name.</div>
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" aria-describedby="emailHelp">
-                  <label for="email">E-Mail</label>
-                </div>
-                <div id="emailHelp" class="form-text text-muted" style="display: none;">Please enter a valid e-mail address.</div>
-                <div class="form-floating mb-3">
-                  <textarea class="form-control" id="message" name="message" placeholder="Message" style="height: 200px;" aria-describedby="messageHelp"></textarea>
-                  <label for="message">Message</label>
-                </div>
-                <div id="messageHelp" class="form-text text-muted" style="display: none;">Please enter a message.</div>
-                <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg">Send</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
-  <!--<footer class="text-center mt-auto" style="background: #f2f2f2; height: 120px; position: absolute; bottom: 0; left:0; width: 100%;">
-    <div class="container mt-auto">
-      <div class="row mt-auto">
-        <div class="col-12 mt-auto" >
-          <p>Copyright © MyWebsite. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>-->
-
-<div id="pdfReport" class="pdf-report">
-
+  <!-- Report -->
+  <div id="pdfReport" class="pdf-report">
     <!-- Header -->
-<section id="Report Header">
-    <header>
-      <div class="container-fluid bb-header-container">
-        <div class="row">
-          <div class="col-auto g-0" id="Report_Blue_Bar_Column">
-            <div class="bb-rectangle"></div>
-          </div>
-          <div class="col bb-page-title-container" id="Report_Title_Column">
-            <h1 class="bb-page-title">BETON BAUEN</h1>
-            <h2 class="bb-report-page-subtitle">HAND-ARM VIBRATION MONITORING</h2>
-          </div>
-          <div class="col bb-logo-container" id="report_Logo_Column">
+    <section id="Report Header">
+      <header>
+        <div class="container-fluid bb-header-container">
+          <div class="row">
+            <div class="col-auto g-0" id="Report_Blue_Bar_Column">
+              <div class="bb-rectangle"></div>
+            </div>
+            <div class="col bb-page-title-container" id="Report_Title_Column">
+              <h1 class="bb-page-title">BETON BAUEN</h1>
+              <h2 class="bb-report-page-subtitle">HAND-ARM VIBRATION MONITORING</h2>
+            </div>
+            <div class="col bb-logo-container" id="report_Logo_Column">
               <img class="bb-logo float-end" alt="Betonbauen logo"/>
-          </div>		
+            </div>		
+          </div>
         </div>
-      </div>
-    </header>
-  </section>
+      </header>
+    </section>
     <!-- Work Details -->
-<section id="Report_Work_Details">
-    <div></div>
-    <div></div>
-    <div class="container-fluid bb-table mt-4 mb-4">
-      <span class="input-group-text text-bold section-header mb-3">WORK DETAILS</span>
-      <!-- Employee name -->	  
-      <div id="Report_Employee_Name" class="row">
-        <div class="col-auto">	
-          <div class="input-group input-group-sm mb-2">
-            <span class="input-group-text bb-input-group-text" id="ReportnameInput">EMPLOYEE NAME:</span>
-              <span id="pdfEmployee" class="form-control text-lg-start reportfield"></span>
+    <section id="Report_Work_Details">
+      <div></div>
+      <div class="container-fluid bb-section-container">
+        <span class="input-group-text text-bold bb-section-header">WORK DETAILS</span>
+        <!-- Employee name -->	  
+          <div id="Report_Employee_Name" class="row">
+            <div class="col-auto">	
+              <div class="input-group input-group-sm mb-2">
+                <span class="input-group-text bb-input-group-label" id="ReportnameInput">EMPLOYEE NAME:</span>
+                <span id="pdfEmployee" class="form-control text-lg-start bb-input-group-text"></span>
+              </div>
+            </div>
+          </div>
+        <!-- Site name -->
+        <div id="Repo_Site_Name" class="row">
+          <div class="col-auto">
+            <div class="input-group input-group-sm mb-2">
+              <span class="input-group-text bb-input-group-label" id="reportlocationInput">SITE / LOCATION:</span>
+              <span id="pdfSite" class="form-control text-lg-start bb-input-group-text"></span>
+            </div>      
+          </div>
+        </div>
+        <!-- Week -->
+        <div id="Report_Date" class="row">
+          <div class="col-auto">
+            <div class="input-group input-group-sm mb-2">
+              <span class="input-group-text bb-input-group-label" id="reportdatetext">DATE:</span>
+              <span id="pdfDate" class="form-control text-lg-start bb-input-group-text"></span>
+            </div>      
           </div>
         </div>
       </div>
-      <!-- Site name -->
-      <div id="Repo_Site_Name" class="row">
-        <div class="col-auto">
-          <div class="input-group input-group-sm mb-2">
-            <span class="input-group-text bb-input-group-text" id="reportlocationInput">SITE / LOCATION:</span>
-            <span id="pdfSite" class="form-control text-lg-start reportfield"></span>
-          </div>      
-        </div>
-      </div>
-      <!-- Week -->
-      <div id="Report_Date" class="row">
-        <div class="col-auto">
-          <div class="input-group input-group-sm mb-2">
-            <span class="input-group-text bb-input-group-text" id="reportdatetext">DATE:</span>
-            <span id="pdfDate" class="form-control text-lg-start reportfield"></span>
-          </div>      
-        </div>
-      </div>
-    </div>
-  </section>	
+    </section>	
     <!-- Tool Data -->
-	<div class="container-fluid bb-table mt-4 mb-4">
-      <span class="input-group-text text-bold section-header mb-3">TOOL DATA</span>
-	
-            
-
-<table class="report-table">
-    <thead>
-        <tr>
+    <div class="container-fluid bb-section-container">
+      <span class="input-group-text text-bold bb-section-header">TOOL DATA</span>       
+      <table class="report-table">
+        <thead>
+          <tr>
             <th>Tool</th>
             <th>Vibration Magnitude (m/s²)</th>
             <th>Trigger Time</th>
             <th>Exposure Points</th>
-        </tr>
-    </thead>
-
-    <tbody id="pdfToolRows"></tbody>
-
-    <tfoot>
-		<tr><td class="invisible"><p></p></td></tr>
-        <tr>
-			<td colspan="2" class="invisible"></td>
-            <td colspan="1" class="bbformfield">
-                <strong>Daily Total</strong>
+          </tr>
+        </thead>
+        <tbody id="pdfToolRows"></tbody>
+        <tfoot>
+          <tr>
+            <td class="invisible"><p></p></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="invisible"></td>
+            <td colspan="1" class="bb-form-field">
+              <strong>Daily Total</strong>
             </td>
             <td id="pdfTotalPoints"></td>
-        </tr>
-    </tfoot>
-</table>
-</div>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
     <!-- Result -->
-	
-	    <div class="container-fluid bb-table mt-4 mb-4">
-      <span id="report_results-heading" class="input-group-text d-none text-bold section-header mb-3">DAILY EXPOSURE SUMMARY</span>
-<div id="pdfResult" class="alert result">
-
+    <div class="container-fluid bb-section-container">
+      <span id="report_results-heading" class="input-group-text text-bold bb-section-header">DAILY EXPOSURE SUMMARY</span>
+      <div id="pdfResult" class="alert result">
         <div class="result-header">
-            <span id="pdfResultIcon"></span>
-            <span id="pdfStatus" class="result-title"></span>
+          <span id="pdfResultIcon"></span>
+          <span id="pdfStatus" class="result-title"></span>
         </div>
-
         <div id="pdfExposure" class="result-exposure"></div>
         <div id="pdfDetail" class="result-detail"></div>
         <div id="pdfAction" class="result-action"></div>
-
+      </div>
     </div>
-	</div>
-	
-	
- 
+  </div>
 
-    
-
-</div>
-
-
-
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="JS/popper-2.11.8.min.js"></script>
-  <script src="JS/bootstrap-5.3.8.js"></script>
-  <script src="JS/Tools.js"></script>
-  <script src="JS/Calculator.js"></script>
-  <script src="JS/Pdf.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="JS/popper-2.11.8.min.js"></script>
+<script src="JS/bootstrap-5.3.8.js"></script>
+<script src="JS/Tools.js"></script>
+<script src="JS/Calculator.js"></script>
+<script src="JS/Pdf.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 
